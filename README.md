@@ -1,7 +1,3 @@
-# cf-workers
-
-I'll create a comprehensive README file for this Cloudflare Worker that handles geofencing and email-based access control.
-
 # Geofencing & Email Access Cloudflare Worker
 
 A Cloudflare Worker that provides country-based access control (geofencing) with email authentication bypass capabilities.
