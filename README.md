@@ -23,7 +23,7 @@ A Cloudflare Worker that provides country-based access control (geofencing) with
 
 ## Overview
 
-This Cloudflare Worker implements a geofencing system that restricts website access based on the visitor's country, with intelligent subdomain routing based on location and language. It also provides an email-based authentication system that allows authorized users to bypass these restrictions.
+This Cloudflare Worker implements a geofencing system that restricts website access based on the visitor's country, with intelligent subdomain routing based on location and language. It also provides an email-based authentication system that allows authorized users to bypass these restrictions (if authorized).
 
 ## Features
 
