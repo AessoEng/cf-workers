@@ -14,16 +14,19 @@ export default {
       
       // Country mapping - country code: subdomain (empty for default domain)
       const countryMap = {
-        CA: "en-ca",
         US: "",
         GU: "",
         PR: ""
       };
       
       // Language overrides - [country, language]: subdomain
-      const languageOverrides = {
-        "US-es": "es-us"
-      };
+      //const languageOverrides = {
+      //  "US-es": "es-us",
+      //  "BE-de": "de-be"
+      //};
+      
+      // Using empty object for now
+      const languageOverrides = {};
 
       // Check required KV namespaces
       if (!env.GLOBAL_ALLOWED_EMAILS || !env.SITE_ALLOWED_EMAILS || !env.AUTH_TOKENS) {
@@ -77,10 +80,8 @@ This link will expire in 15 minutes.
 
 If you did not request this link, please ignore this email.`;
                 
-                const fromDomain = env.SENDER_DOMAIN || hostname;
-                const fromAddress = fromDomain === 'lorestudio.co' 
-                  ? 'no-reply@lorestudio.co' 
-                  : `access@${fromDomain}`;
+                // Always use jumohealth.com domain and no-reply@jumohealth.com
+                const fromAddress = 'no-reply@jumohealth.com';
                 
                 const sendResponse = await fetch('https://api.resend.com/emails', {
                   method: 'POST',
